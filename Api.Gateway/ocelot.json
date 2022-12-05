@@ -1,0 +1,31 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5028"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/Book/GetBooks",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/Book/GetBooks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5289
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/Book/BookAvailable/{BookId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/Book/BookAvailable/{BookId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5289
+        }
+      ]
+    }
+  ]
+}
